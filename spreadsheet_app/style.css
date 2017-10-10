@@ -1,0 +1,68 @@
+body {
+  background-color: #f8f8f8;
+	font-family: Helvetica, sans-serif;
+}
+#spreadsheet {
+	width: 100%;
+  outline: 1px solid black;
+	text-align: left;
+	vertical-align: center;
+	border-spacing:  0px;
+
+  /* Known area for improvement: fix width of leftmost column to be
+  smaller than the rest while still keeping the rest of the widths uniform.
+  (Auto width will allow a smaller first column, but will resize cells
+  dynamically as text is added.) */
+  table-layout: fixed;
+}
+#spreadsheet td+td {
+	height: 21px;
+	border:1px solid black;
+	padding-top:3px;
+	padding-bottom:4px;
+  padding: 5px;
+  overflow: hidden;
+}
+#spreadsheet th {
+  border:1px solid black;
+  text-align: center;
+  background-color: #cccccc;
+}
+#spreadsheet td[id^="_"] {
+  height: 21px;
+  border:1px solid black;
+  padding-top:3px;
+  padding-bottom:4px;
+  padding: 5px;
+
+  text-align: center;
+  font-style: bold;
+  background-color: #cccccc;
+  width: 25px !important;
+  max-width: 25px;
+}
+#title {
+  position: relative;
+  padding: 5px;
+}
+#title:empty:before {
+	content: '(Insert title of spreadsheet to save or load)';
+	font-style: italic;
+	color: #999999;
+}
+[contenteditable]:hover, #title:hover {
+  border:1px solid red !important;
+  padding: 4px;
+}
+#alert_field {
+  font-style: italic;
+  font-size: 12px;
+  color: red;
+}
+#alert_div {
+  position: absolute;
+}
+.highlight {
+  background-color: highlight;
+  color: highlighttext;
+}

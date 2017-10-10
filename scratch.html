@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>focusout demo</title>
+  <style>
+  tr {
+    float: left;
+    margin-right: 1em;
+  }
+  tr td {
+    margin-top: 0;
+    border: 1px solid black;
+    width: 100px;
+  }
+  </style>
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+</head>
+<body onload="generate_cells()">
+
+<table id="table">
+<!--   <tr>
+    <td contenteditable id="A"></td>
+    <td contenteditable id="B"></td>
+  </tr> -->
+</table>
+<div id="focus-count">focusout fire</div>
+<div id="blur-count">blur fire</div>
+
+<script src="scratch.js"></script>
+
+</body>
+</html>

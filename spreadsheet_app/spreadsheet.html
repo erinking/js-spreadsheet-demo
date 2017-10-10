@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href="style.css">
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+<!-- <script src="jquery-2.0.3.min.js"></script> -->
+<script type="text/javascript" src="spreadsheet.js"></script>
+<title>SpaceX Spreadsheet</title>
+</head>
+<body onload="spreadsheet.open()">
+<h2>SpaceX Programming Assignment: Editable Spreadsheet</h2>
+<h4>by Erin King</h4>
+<hr>
+
+<div id="alert_div"><p id="alert_field"></p></div>
+<br/>
+<h3 contenteditable id="title"></h3>
+<button id="new" onclick="spreadsheet.new_sheet()">New</button>
+<button id="save" onclick="spreadsheet.save_cells()">Save</button>
+<button id="load" onclick="spreadsheet.load_cells()">Load</button>
+<table id="spreadsheet"></table>
+<button onclick="spreadsheet.add_row()">Add Row</button>
+<button onclick="spreadsheet.add_column()">Add Column</button>
+</body>
+</html>
